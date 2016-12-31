@@ -8,6 +8,7 @@ import org.androidannotations.annotations.UiThread
 import org.androidannotations.annotations.Background
 import org.androidannotations.annotations.ViewById
 import org.androidannotations.annotations.res.StringRes
+import org.androidannotations.annotations.sharedpreferences.Pref
 import org.androidannotations.gradle.R
 import java.util.Date
 
@@ -19,6 +20,9 @@ open class HelloAndroidActivity : Activity() {
 
     @ViewById
     protected lateinit var helloTextView: TextView
+
+    @Pref
+    protected lateinit var pref: TestPref_
 
     @AfterViews
     protected fun afterViews() {
